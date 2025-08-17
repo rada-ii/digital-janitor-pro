@@ -14,7 +14,7 @@ Automatically organizes messy folders by sorting files into categories with dupl
 
 1. **Clone and run**
    ```bash
-   git clone https://github.com/yourusername/digital-janitor-pro.git
+   git clone https://github.com/rada-ii/digital-janitor-pro.git
    cd digital-janitor-pro
    python main.py
    ```
