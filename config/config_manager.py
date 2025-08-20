@@ -23,6 +23,7 @@ def create_default_config(config_path):
         "features": {
             "delete_temp_folder": True,
             "sort_by_size": True,
+            "sort_by_date": True
         }
     }
 
@@ -57,6 +58,9 @@ def interactive_config_setup(config_path):
     huge_mb = input("Huge file threshold in MB (default 1024): ").strip()
     huge_mb = int(huge_mb) if huge_mb else 1024
 
+    sort_by_date = input("Sort files by date? (y/n, default y): ").strip().lower()
+    sort_by_date = True if sort_by_date != 'n' else False
+
     custom_config = {
         "folder_names": {
             "text_files": "text_files",
@@ -71,7 +75,8 @@ def interactive_config_setup(config_path):
         },
         "features": {
             "delete_temp_folder": True,
-            "sort_by_size": True
+            "sort_by_size": True,
+            "sort_by_date": sort_by_date
         }
     }
 
